@@ -11,10 +11,10 @@ async function getPost(params:any) {
   return post
 }
  
-export default async function Post({ params }) {
+export default async function Post({ params: { id } }) {
   const post = await getPost(params)
  
-  return <PostLayout post={post} />
+  return post 
 }
 
 
